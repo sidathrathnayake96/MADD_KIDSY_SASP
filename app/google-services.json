@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "231154603923",
+    "firebase_url": "https://kidsy-fcca6.firebaseio.com",
+    "project_id": "kidsy-fcca6",
+    "storage_bucket": "kidsy-fcca6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231154603923:android:792be5d0ac196f2d127a66",
+        "android_client_info": {
+          "package_name": "com.example.kidsy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231154603923-r2gnl7858lkhe0qi4vih9v0afumbkqrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs01MC-Kc6pFMd99_x5do0vBZU2kFw0ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231154603923-r2gnl7858lkhe0qi4vih9v0afumbkqrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

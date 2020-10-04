@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/aa"
+    tools:context=".AdminEmployee">
+
+
+
+    <EditText
+        android:id="@+id/emp_id_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/EmpId"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/emp_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="@string/EmpName"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/emp_phone_et"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="@string/EmpPhone"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/emp_salary_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/EmpSalary"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:id="@+id/ebtnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnEsave"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"/>
+
+        <Button
+            android:id="@+id/ebtnshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnEshow"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"/>
+
+        <Button
+            android:id="@+id/ebtnupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnEupdate"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"/>
+
+        <Button
+            android:id="@+id/ebtndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnEdelete"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+</LinearLayout>

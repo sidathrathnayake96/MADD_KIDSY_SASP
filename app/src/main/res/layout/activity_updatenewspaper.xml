@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p6"
+    android:orientation="vertical"
+    tools:context=".updatenewspaper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/updatenewspaper"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="@string/updatenewspaper"
+            android:textColor="#E91E63"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/newspapername1"
+            android:layout_width="400dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/newspapername"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="134dp" />
+    <Button
+        android:id="@+id/update"
+        android:layout_width="223dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/update"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp" />
+</LinearLayout>

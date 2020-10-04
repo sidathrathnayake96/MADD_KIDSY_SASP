@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="05dp"
+    android:paddingTop="0dp"
+    android:paddingRight="05dp"
+    android:paddingBottom="0dp">
+
+
+    <TextView
+        android:id="@+id/roid"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="0dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/rdfirstname"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+    <TextView
+        android:id="@+id/rdemail"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+    <TextView
+        android:id="@+id/rdaddress"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+    <TextView
+        android:id="@+id/rdbook"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+    <TextView
+        android:id="@+id/rdqty"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/rddate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="0dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:background="@color/dark"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginBottom="0dp"
+    />
+</LinearLayout>

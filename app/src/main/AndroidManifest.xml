@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kidsy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PaymentEmail"></activity>
+        <activity android:name=".PaymentListActivity" />
+        <activity android:name=".PaymentToDeliverListActivity" />
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".Payment" />
+        <activity android:name=".DeliverDetails" />
+        <activity android:name=".DeliverListActivity" />
+        <activity android:name=".Load">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AdminHome" />
+        <activity android:name=".Admindeliver" />
+        <activity android:name=".Deliver" />
+        <activity android:name=".Buybook" />
+        <activity android:name=".Others" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MotivationalVideo"/>
+        <activity android:name=".ShowVideo" />
+        <activity android:name=".AdminVideo" />
+        <activity android:name=".Entertainment" />
+        <activity android:name=".AdminEmployee" />
+        <activity android:name=".ImagesActivity" />
+        <activity android:name=".Quote" />
+        <activity android:name=".AdminQuote" />
+        <activity android:name=".AdminPannel" />
+        <activity android:name=".Login" />
+        <activity android:name=".Home" />
+        <activity android:name=".Register" />
+        <activity android:name=".Welcome"/>
+        <activity android:name=".MainUserActivity"/>
+        <activity android:name=".EditBookActivity" />
+        <activity android:name=".AddProductActivity1" />
+        <activity android:name=".MainSellerActivity"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

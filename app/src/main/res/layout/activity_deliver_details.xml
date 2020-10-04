@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deliverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Deliver"
+    android:background="@drawable/aa">
+    <com.google.android.material.navigation.NavigationView
+        app:headerLayout="@layout/header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:itemTextColor="@color/dark"
+        app:itemIconTint="@color/dark"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start">
+
+    </com.google.android.material.navigation.NavigationView>
+    <ScrollView
+        android:id="@+id/scrolldeliver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/deliverlay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                android:text="@string/deliver"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"
+                >
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/orderid"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/orderid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:textColor="@color/dark"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:ems="10"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/orderid"
+                    android:autofillHints="@string/orderid"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/payfirstname"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/delfirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/dark"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/delfirst"
+                    android:autofillHints="@string/delfirst"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/payemail"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/delemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/dark"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/delemail"
+                    android:autofillHints="@string/delemail"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/del_address"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/deladdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/dark"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/deladdress"
+                    android:autofillHints="@string/deladdress"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/book_name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/delbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/dark"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/delbook"
+                    android:autofillHints="@string/delbook"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="150sp"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/del_quantity"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <EditText
+                    android:id="@+id/delqty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/dark"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="@string/paybookqty"
+                    android:autofillHints="@string/paybookqty"
+                    />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/upd_deliver_date"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:id="@+id/deldate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:inputType="date"
+                android:ems="10"
+                android:textColor="@color/dark"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/deldate"
+                android:autofillHints="@string/deldate"
+                />
+        </LinearLayout>
+            <Button
+                android:id="@+id/btnupdatedeliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/deliverupdate"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+            <Button
+                android:id="@+id/btndltdeliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/deliverdelete"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+
