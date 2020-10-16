@@ -181,7 +181,7 @@ public class Payment extends AppCompatActivity {
 
                 payref.child(String.valueOf(pid+1)).setValue(paymentData);
                 Toast.makeText(getApplicationContext(), "Payment added Successfully", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Payment.this, PaymentListActivity.class);
+                Intent intent = new Intent(Payment.this, MainActivity.class);
                 startActivity(intent);
 
             }

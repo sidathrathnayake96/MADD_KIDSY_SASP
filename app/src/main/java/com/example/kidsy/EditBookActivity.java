@@ -210,23 +210,27 @@ public class EditBookActivity extends AppCompatActivity {
         Toast.makeText(this,"Updating..",Toast.LENGTH_SHORT).show();
 
         if(image_uri==null){
-
+            //update without image
             HashMap<String,Object> hashMap = new HashMap<>();
 
-            hashMap.put("bookTitle",""+bookTitle);
-            hashMap.put("bookCategory",""+bookCategory);
-            hashMap.put("bookPrice",""+bookPrice);
-            hashMap.put("bookShip",""+bookShip);
-            hashMap.put("bookDate",""+bookDate);
+            //set data in hashmap to update
+            hashMap.put("bookname", "" + bookTitle);
+            hashMap.put("bookcategory", "" + bookCategory);
+            hashMap.put("bookprice", "" + bookPrice);
+            hashMap.put("bookship", "" + bookShip);
+            hashMap.put("bookuploaddate", "" + bookDate);
 
-            DatabaseReference reference= FirebaseDatabase.getInstance().getReference("Books");
+
+            //update to db
+
+            DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Books");
             reference.child("book").child(bookId)
                     .updateChildren(hashMap)
                     .addOnSuccessListener(new OnSuccessListener<Void>(){
 
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(EditBookActivity.this,"Uploaded..",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditBookActivity.this,"Updated...",Toast.LENGTH_SHORT).show();
 
                         }
                     })
@@ -240,14 +244,14 @@ public class EditBookActivity extends AppCompatActivity {
                     });
 
         }else {
-
+            //update with image
             String filePathAndName = "book_images/"+""+bookId;
             StorageReference storageReference= FirebaseStorage.getInstance().getReference(filePathAndName);
             storageReference.putFile(image_uri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Task<Uri> uriTask =taskSnapshot.getStorage().getDownloadUrl();
+                            Task<Uri>uriTask =taskSnapshot.getStorage().getDownloadUrl();
                             while (!uriTask.isSuccessful());
                             Uri downloadImageUri = uriTask.getResult();
 
@@ -255,21 +259,22 @@ public class EditBookActivity extends AppCompatActivity {
 
                                 HashMap<String,Object> hashMap = new HashMap<>();
 
-                                hashMap.put("bookTitle",""+bookTitle);
-                                hashMap.put("bookCategory",""+bookCategory);
-                                hashMap.put("bookPrice",""+bookPrice);
-                                hashMap.put("bookIconIv",""+downloadImageUri);
-                                hashMap.put("bookShip",""+bookShip);
-                                hashMap.put("bookDate",""+bookDate);
+                                hashMap.put("bookname", "" + bookTitle);
+                                hashMap.put("bookcategory", "" + bookCategory);
+                                hashMap.put("bookprice", "" + bookPrice);
+                                hashMap.put("bookship", "" + bookShip);
+                                hashMap.put("bookuploaddate", "" + bookDate);
+                                hashMap.put("bookimage",""+downloadImageUri);
 
-                                DatabaseReference reference= FirebaseDatabase.getInstance().getReference("Books");
+
+                                DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Books");
                                 reference.child("book").child(bookId)
                                         .updateChildren(hashMap)
                                         .addOnSuccessListener(new OnSuccessListener<Void>(){
 
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                Toast.makeText(EditBookActivity.this,"Uploaded..",Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(EditBookActivity.this,"Updated...",Toast.LENGTH_SHORT).show();
 
                                             }
                                         })
@@ -377,10 +382,10 @@ public class EditBookActivity extends AppCompatActivity {
     }
     private boolean checkCameraPermission(){
 
-        boolean result= ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA) ==
+        boolean result=ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA) ==
                 (PackageManager.PERMISSION_GRANTED);
 
-        boolean result1= ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+        boolean result1=ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
                 (PackageManager.PERMISSION_GRANTED);
 
         return result && result1;
