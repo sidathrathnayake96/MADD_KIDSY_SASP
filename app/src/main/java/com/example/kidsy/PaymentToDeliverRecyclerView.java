@@ -27,7 +27,7 @@ public class PaymentToDeliverRecyclerView {
 
     class PaymentItemView extends RecyclerView.ViewHolder{
 
-        private TextView pid;
+
         private TextView pfirstname;
         private TextView pemail;
         private TextView paddress;
@@ -45,7 +45,7 @@ public class PaymentToDeliverRecyclerView {
             super(LayoutInflater.from(context).
                     inflate(R.layout.payment_list_item,parent,false));
 
-            pid =(TextView) itemView.findViewById(R.id.rpid);
+
             pfirstname =(TextView) itemView.findViewById(R.id.rpfirstname);
             pemail =(TextView) itemView.findViewById(R.id.rpemail);
             paddress =(TextView) itemView.findViewById(R.id.rpaddress);
@@ -62,7 +62,6 @@ public class PaymentToDeliverRecyclerView {
                 public void onClick(View view) {
                     Intent intent=new Intent(context, Deliver.class);
                     intent.putExtra("key",key);
-                    intent.putExtra("payid",pid.getText().toString());
                     intent.putExtra("payfirstname",pfirstname.getText().toString());
                     intent.putExtra("payemail",pemail.getText().toString());
                     intent.putExtra("payaddress",paddress.getText().toString());
@@ -75,7 +74,6 @@ public class PaymentToDeliverRecyclerView {
         }
         public void bind(PaymentData paymentData, String key){
 
-            pid.setText(paymentData.getPayid());
             pfirstname.setText(paymentData.getPayfirstname());
             pemail.setText(paymentData.getPayemail());
             paddress.setText(paymentData.getPayaddress());

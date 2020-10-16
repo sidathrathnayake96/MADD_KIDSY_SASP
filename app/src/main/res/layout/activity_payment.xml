@@ -30,6 +30,7 @@
             android:orientation="vertical"
             android:background="@color/white"
             >
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,20 +46,7 @@
                 android:fontFamily="sans-serif-black"
                 >
             </TextView>
-            <EditText
-                android:id="@+id/payid"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="start"
-                android:inputType="number"
-                android:ems="10"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="0dp"
-                android:hint="@string/payid"
-                android:autofillHints="@string/payid"
-                />
+
             <EditText
                 android:id="@+id/payfirstname"
                 android:layout_width="match_parent"
@@ -103,7 +91,7 @@
                 />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
@@ -191,7 +179,7 @@
 
                 <TextView
                     android:id="@+id/payname"
-                    android:layout_width="150sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="start|center"
                     android:layout_marginLeft="0dp"
@@ -208,9 +196,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="0dp"
                     android:layout_marginBottom="0dp"
                     android:hint="@string/paybookname"
                     android:autofillHints="@string/paybookname"
@@ -229,7 +217,7 @@
 
                 <TextView
                     android:id="@+id/payqt"
-                    android:layout_width="150sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="start|center"
                     android:layout_marginLeft="0dp"
@@ -246,9 +234,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="0dp"
                     android:layout_marginBottom="0dp"
                     android:hint="@string/paybookqty"
                     android:textSize="20dp"
@@ -266,7 +254,7 @@
 
                 <TextView
                     android:id="@+id/paytot"
-                    android:layout_width="150sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="start|center"
                     android:layout_marginLeft="0dp"
@@ -284,9 +272,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="0dp"
                     android:layout_marginBottom="0dp"
                     android:hint="@string/paytotalprice"
                     android:autofillHints="@string/paytotalprice"
@@ -324,7 +312,7 @@
                 android:textSize="20sp"
                 android:textAlignment="center" />
             <Button
-                android:id="@+id/btnpaycancel"
+                android:id="@+id/backhome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

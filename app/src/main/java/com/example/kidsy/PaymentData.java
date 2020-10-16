@@ -2,7 +2,7 @@ package com.example.kidsy;
 
 public class PaymentData {
 
-    String payid;
+
     String payfirstname;
     String payemail;
     String payaddress;
@@ -17,9 +17,8 @@ public class PaymentData {
     public PaymentData() {
     }
 
-    public PaymentData(String payid,String payfirstname, String payemail,String payaddress,String paycardnumber, String payccv, String paycardexpiredate, String paybookname,String payqty, String paytotalprice, String paydate) {
+    public PaymentData(String payfirstname, String payemail,String payaddress,String paycardnumber, String payccv, String paycardexpiredate, String paybookname,String payqty, String paytotalprice, String paydate) {
 
-        this.payid = payid;
         this.payfirstname = payfirstname;
         this.payemail = payemail;
         this.payaddress = payaddress;
@@ -30,14 +29,6 @@ public class PaymentData {
         this.payqty = payqty;
         this.paytotalprice = paytotalprice;
         this.paydate = paydate;
-    }
-
-    public String getPayid() {
-        return payid;
-    }
-
-    public void setPayid(String payid) {
-        this.payid = payid;
     }
 
     public String getPayfirstname() {

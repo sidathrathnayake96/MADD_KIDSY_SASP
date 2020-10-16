@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class MainUserActivity extends AppCompatActivity {
 
-    private ImageButton logouttBtn,addProductBtn,filterBookBtn;
+    private ImageButton logouttBtn,filterBookBtn;
     TextView tabProductsTv,tabOrdersTv,filterBooksTv;
     RelativeLayout productRl,orderRl;
     EditText searchBookEt;

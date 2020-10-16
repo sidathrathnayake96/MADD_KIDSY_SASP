@@ -14,10 +14,9 @@ import java.util.List;
 
 public class PaymentDetails extends AppCompatActivity {
 
-    private EditText epayid,epayfirstname,epayemail,epayaddress,epaycardnumber,epayccv,epaycardexpiredate,epaybookname,epayqty,epaytotalprice,epaydate;
+    private EditText epayfirstname,epayemail,epayaddress,epaycardnumber,epayccv,epaycardexpiredate,epaybookname,epayqty,epaytotalprice,epaydate;
     private Button ubtn,dbtn;
     private String key;
-    private String payid;
     private String payfirstname;
     private String payemail;
     private String payaddress;
@@ -35,7 +34,6 @@ public class PaymentDetails extends AppCompatActivity {
         setContentView(R.layout.activity_payment_details);
 
         key = getIntent().getStringExtra("key");
-        payid = getIntent().getStringExtra("payid");
         payfirstname = getIntent().getStringExtra("payfirstname");payemail = getIntent().getStringExtra("payemail");
         payaddress = getIntent().getStringExtra("payaddress");
         paycardnumber = getIntent().getStringExtra("paycardnumber");
@@ -46,8 +44,6 @@ public class PaymentDetails extends AppCompatActivity {
         paytotalprice = getIntent().getStringExtra("paytotalprice");
         paydate = getIntent().getStringExtra("paydate");
 
-        epayid=(EditText) findViewById(R.id.payid);
-        epayid.setText(payid);
         epayfirstname=(EditText) findViewById(R.id.payfirstname);
         epayfirstname.setText(payfirstname);
         epayemail=(EditText) findViewById(R.id.payemail);
@@ -69,15 +65,25 @@ public class PaymentDetails extends AppCompatActivity {
         epaydate=(EditText) findViewById(R.id.paydate);
         epaydate.setText(paydate);
 
+        Button bhbtn = findViewById(R.id.backhome);
+        bhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(PaymentDetails.this,AdminHome.class);
+                startActivity(intent);
+            }
+        });
+
         ubtn = (Button) findViewById(R.id.btnupdatepayment);
         dbtn = (Button) findViewById(R.id.btndltpayment);
+
+
 
         ubtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PaymentData paymentdatas= new PaymentData();
 
-                paymentdatas.setPayid(epayid.getText().toString());
+          PaymentData paymentdatas= new PaymentData();
                 paymentdatas.setPayfirstname(epayfirstname.getText().toString());
                 paymentdatas.setPayemail(epayemail.getText().toString());
                 paymentdatas.setPayaddress(epayaddress.getText().toString());

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void openBuybook(){
-        Intent intent = new Intent(this,Buybook.class);
+        Intent intent = new Intent(this,StoreDetailsActivity.class);
         startActivity(intent);
     }
  /*   public void openNewspapers(){

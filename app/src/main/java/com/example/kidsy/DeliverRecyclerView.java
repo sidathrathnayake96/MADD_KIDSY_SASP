@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,7 +25,7 @@ public class DeliverRecyclerView {
     }
 
     class DeliverItemView extends RecyclerView.ViewHolder{
-        private TextView doid;
+
         private TextView dfirstname;
         private TextView demail;
         private TextView daddress;
@@ -38,7 +39,7 @@ public class DeliverRecyclerView {
             super(LayoutInflater.from(context).
             inflate(R.layout.deliver_list_item,parent,false));
 
-            doid =(TextView) itemView.findViewById(R.id.roid);
+
             dfirstname =(TextView) itemView.findViewById(R.id.rdfirstname);
             demail =(TextView) itemView.findViewById(R.id.rdemail);
             daddress =(TextView) itemView.findViewById(R.id.rdaddress);
@@ -46,12 +47,13 @@ public class DeliverRecyclerView {
             dqty =(TextView) itemView.findViewById(R.id.rdqty);
             ddate =(TextView) itemView.findViewById(R.id.rddate);
 
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent=new Intent(context,DeliverDetails.class);
                     intent.putExtra("key",key);
-                    intent.putExtra("orderid",doid.getText().toString());
+
                     intent.putExtra("delfirst",dfirstname.getText().toString());
                     intent.putExtra("delemail",demail.getText().toString());
                     intent.putExtra("deladdress",daddress.getText().toString());
@@ -64,7 +66,7 @@ public class DeliverRecyclerView {
             });
         }
         public void bind(DeliverData deliverData,String key){
-            doid.setText(deliverData.getOrderid());
+
             dfirstname.setText(deliverData.getDelfirst());
             demail.setText(deliverData.getDelemail());
             daddress.setText(deliverData.getDeladdress());
@@ -99,4 +101,5 @@ public class DeliverRecyclerView {
             return deliverDataList.size();
         }
     }
+
 }

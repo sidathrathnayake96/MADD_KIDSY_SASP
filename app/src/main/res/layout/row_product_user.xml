@@ -41,13 +41,16 @@
                 android:text="@string/book_price"
                 android:layout_below="@+id/nameTV"
                 android:textColor="@color/colorAccent" />
-            <TextView
+            <Button
                 android:id="@+id/addtocartTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/order_now"
+                android:background="@drawable/custom_button2"
+                android:text=" ORDER NOW "
                 android:layout_below="@+id/priceTv"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
                 android:drawableStart="@drawable/ic_baseline_add_shopping_cart_24"
                 android:gravity="center_vertical"
                 android:textColor="@color/colorAccent" />

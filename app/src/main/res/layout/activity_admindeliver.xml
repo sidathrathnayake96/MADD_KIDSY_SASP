@@ -37,7 +37,17 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="0dp"
             android:orientation="vertical">
-
+            <Button
+                android:id="@+id/backhome"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/back_to_home"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"/>
 
 
             <LinearLayout

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class PaymentEmail extends AppCompatActivity {
-    Button btn;
+    Button btn,sbtn;
     private String key;
     private String payemail;
     TextView ddelemail,ddelsubject;
@@ -30,11 +30,19 @@ public class PaymentEmail extends AppCompatActivity {
         ddelsubject=findViewById(R.id.emailsubject);
         ddelmsg = findViewById(R.id.emailmsg);
         btn = findViewById(R.id.btnemail);
+        sbtn = findViewById(R.id.btnemaildone);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendEmail();
+            }
+        });
+        sbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(PaymentEmail.this,Admindeliver.class);
+                startActivity(intent);
             }
         });
 

@@ -43,6 +43,15 @@ public class Admindeliver extends AppCompatActivity {
                 openRead();
             }
         });
+
+        Button bhbtn = findViewById(R.id.backhome);
+        bhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Admindeliver.this,AdminHome.class);
+                startActivity(intent);
+            }
+        });
    }
     public void openDeliver(){
         Intent intent = new Intent(this,PaymentToDeliverListActivity.class);

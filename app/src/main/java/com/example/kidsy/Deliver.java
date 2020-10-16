@@ -31,31 +31,36 @@ public class Deliver extends AppCompatActivity {
     private Button btn;
     long delid = 0;
     private String key;
-    private String payid;
     private String payfirstname;
     private String payemail;
     private String payaddress;
     private String paybookname;
     private String payqty;
 
-    TextView dorderid,ddelfirst,ddelemail,ddeladdress,ddelbook,ddelqty;
+    TextView ddelfirst,ddelemail,ddeladdress,ddelbook,ddelqty;
     EditText ddeldate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deliver);
 
+        Button bhbtn = findViewById(R.id.backhome);
+        bhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Deliver.this,AdminHome.class);
+                startActivity(intent);
+            }
+        });
 
         key = getIntent().getStringExtra("key");
-        payid = getIntent().getStringExtra("payid");
         payfirstname = getIntent().getStringExtra("payfirstname");
         payemail = getIntent().getStringExtra("payemail");
         payaddress = getIntent().getStringExtra("payaddress");
         paybookname = getIntent().getStringExtra("paybookname");
         payqty = getIntent().getStringExtra("payqty");
 
-        dorderid = (TextView) findViewById(R.id.orderid);
-        dorderid.setText(payid);
+
         ddelfirst = (TextView) findViewById(R.id.delfirst);
         ddelfirst.setText(payfirstname);
         ddelemail = (TextView) findViewById(R.id.delemail);
@@ -68,7 +73,7 @@ public class Deliver extends AppCompatActivity {
         ddelqty.setText(payqty);
 
 
-        dorderid=findViewById(R.id.orderid);
+
         ddelfirst=findViewById(R.id.delfirst);
         ddelemail=findViewById(R.id.delemail);
         ddeladdress=findViewById(R.id.deladdress);
@@ -97,7 +102,7 @@ public class Deliver extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String orderid = dorderid.getText().toString().trim();
+
                 String delfirst = ddelfirst.getText().toString().trim();
                 String delemail = ddelemail.getText().toString().trim();
                 String deladdress = ddeladdress.getText().toString().trim();
@@ -127,7 +132,6 @@ public class Deliver extends AppCompatActivity {
                     return;
                 }
 
-                deliverData.setOrderid(orderid);
                 deliverData.setDelfirst(delfirst);
                 deliverData.setDelemail(delemail);
                 deliverData.setDeladdress(deladdress);
@@ -135,8 +139,8 @@ public class Deliver extends AppCompatActivity {
                 deliverData.setDelqty(delqty);
                 deliverData.setDeldate(deldate);
 
-       payref.child(String.valueOf(delid+1)).setValue(deliverData);
-               // payref.push().setValue(deliverData);
+
+                payref.child(String.valueOf(delid+1)).setValue(deliverData);
                 Toast.makeText(getApplicationContext(), "Order Delivered Successfully", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(getBaseContext(),PaymentEmail.class);
                 intent.putExtra("key",key);

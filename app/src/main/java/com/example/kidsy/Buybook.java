@@ -21,9 +21,9 @@ public class Buybook extends AppCompatActivity {
     private ActionBarDrawerToggle dtoggle;
     private Button btn,cal;
     Context context;
-    TextView booktotalprice;
-    EditText bookname,bookprice,bookqty,bookship;
-    private String key;
+    TextView booktotalprice,bookname,bookprice,bookship;
+    EditText bookqty;
+    private String key,bkey,paybookname,paybookprice,paybookship;
 
     long total =0;
     long ship;
@@ -39,6 +39,29 @@ public class Buybook extends AppCompatActivity {
         dtoggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.hopen, R.string.hclose);
         dtoggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button bhbtn = findViewById(R.id.backhome);
+        bhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Buybook.this,MainUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        key = getIntent().getStringExtra("key");
+        paybookname = getIntent().getStringExtra("paybookname");
+        paybookprice = getIntent().getStringExtra("paybookprice");
+        paybookship = getIntent().getStringExtra("paybookship");
+
+        bookname = findViewById(R.id.buybookname);
+        bookname.setText(paybookname);
+        bookprice = findViewById(R.id.buybookprice);
+        bookprice.setText(paybookprice);
+        bookship = findViewById(R.id.buybookship);
+        bookship.setText(paybookship);
+        bookqty = findViewById(R.id.buybookqty);
+        booktotalprice = findViewById(R.id.buybooktotal);
 
         bookname = findViewById(R.id.buybookname);
         bookprice = findViewById(R.id.buybookprice);
@@ -82,6 +105,8 @@ public class Buybook extends AppCompatActivity {
                     booktotalprice.setError("Please Click the button to calculate your total payment");
                     return;
                 }
+
+
                 Intent intent=new Intent(getBaseContext(),Payment.class);
                 intent.putExtra("key",key);
                 intent.putExtra("paybook",bookname.getText().toString());

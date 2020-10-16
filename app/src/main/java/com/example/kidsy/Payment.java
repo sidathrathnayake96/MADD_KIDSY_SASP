@@ -31,7 +31,7 @@ public class Payment extends AppCompatActivity {
     private String paybookqty;
     private String paybooktotal;
 
-    EditText epayid,epayfirstname,epayemail,epayaddress,epaycardnumber,epayccv,epaycardexpiredate,epaydate;
+    EditText epayfirstname,epayemail,epayaddress,epaycardnumber,epayccv,epaycardexpiredate,epaydate;
     TextView epaybookname,epayqty,epaytotalprice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class Payment extends AppCompatActivity {
         paybookqty = getIntent().getStringExtra("paybookqty");
         paybooktotal = getIntent().getStringExtra("paybooktotal");
 
-        epayid = findViewById(R.id.payid);
         epayfirstname = findViewById(R.id.payfirstname);
         epayemail = findViewById(R.id.payemail);
         epayaddress = findViewById(R.id.payaddress);
@@ -58,7 +57,6 @@ public class Payment extends AppCompatActivity {
         epaytotalprice .setText(paybooktotal);
         epaydate = findViewById(R.id.paydate);
 
-        epayid = findViewById(R.id.payid);
         epayfirstname = findViewById(R.id.payfirstname);
         epayemail = findViewById(R.id.payemail);
         epayaddress = findViewById(R.id.payaddress);
@@ -71,6 +69,14 @@ public class Payment extends AppCompatActivity {
         epaydate = findViewById(R.id.paydate);
         paymentData = new PaymentData();
 
+        Button bhbtn = findViewById(R.id.backhome);
+        bhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Payment.this,MainUserActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn = findViewById(R.id.btnpaycomplete);
 
@@ -93,7 +99,6 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String payid = epayid.getText().toString().trim();
                 String payfirstname = epayfirstname.getText().toString().trim();
                 String payemail = epayemail.getText().toString().trim();
                 String payaddress = epayaddress.getText().toString().trim();
@@ -105,10 +110,7 @@ public class Payment extends AppCompatActivity {
                 String paytotalprice = epaytotalprice.getText().toString().trim();
                 String paydate = epaydate.getText().toString().trim();
 
-                if(TextUtils.isEmpty(payid)){
-                    epayid.setError("payment id can not be empty");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(payfirstname)){
                     epayfirstname.setError("First Name can not be empty");
                     return;
@@ -165,7 +167,7 @@ public class Payment extends AppCompatActivity {
                     return;
                 }
 
-                paymentData.setPayid(payid);
+
                 paymentData.setPayfirstname(payfirstname);
                 paymentData.setPayemail(payemail);
                 paymentData.setPayaddress(payaddress);

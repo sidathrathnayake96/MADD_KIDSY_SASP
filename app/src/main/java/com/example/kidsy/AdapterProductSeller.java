@@ -193,13 +193,13 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
                         Toast.makeText(context,"Book Deleted..",Toast.LENGTH_SHORT).show();
                     }
                 })
-        .addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(context,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(context,""+e.getMessage(),Toast.LENGTH_SHORT).show();
 
-            }
-        });
+                    }
+                });
     }
 
     @Override

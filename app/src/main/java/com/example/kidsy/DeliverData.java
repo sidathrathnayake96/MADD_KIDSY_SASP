@@ -2,7 +2,7 @@ package com.example.kidsy;
 
 public class DeliverData {
 
-    String orderid;
+
     String delfirst;
     String delemail;
     String deladdress;
@@ -13,9 +13,9 @@ public class DeliverData {
     public DeliverData() {
     }
 
-    public DeliverData(String orderid, String delfirst,String delemail, String deladdress,String delbook,String delqty, String deldate) {
+    public DeliverData(String delfirst,String delemail, String deladdress,String delbook,String delqty, String deldate) {
 
-        this.orderid = orderid;
+
         this.delfirst = delfirst;
         this.delemail = delemail;
         this.deladdress = deladdress;
@@ -24,14 +24,6 @@ public class DeliverData {
         this.deldate = deldate;
     }
 
-
-    public String getOrderid() {
-        return orderid;
-    }
-
-    public void setOrderid(String orderid) {
-        this.orderid = orderid;
-    }
 
     public String getDelfirst() {
         return delfirst;
